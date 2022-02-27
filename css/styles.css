@@ -79,7 +79,9 @@ footer li:not(.footer__social-media-icons li) {
     border-bottom: 1px solid #DADADA;
 }
 
-.footer__bottom {
+.footer__bottom,
+.footer__social-media,
+.footer__col:not(:last-child) {
     margin-top: 2.5rem;
 }
 
@@ -87,18 +89,10 @@ footer li:not(.footer__social-media-icons li) {
     margin-bottom: 1.875rem;
 }
 
-.footer__social-media {
-    margin-bottom: 2.5rem;
-}
-
 .footer__social-media-icons {
     display: flex;
     justify-content: center;
     gap: 1rem;
-}
-
-.footer__col:not(:last-child) {
-    margin-bottom: 2.5rem;
 }
 
 .footer__links {
