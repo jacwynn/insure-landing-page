@@ -153,7 +153,6 @@ button {
 /* FOOTER STYLES */
 footer {
     background-color: var(--background-color);
-    font-size: 0.8125rem;
     letter-spacing: 0.09375rem;
     padding: 5.3125rem 1.25rem; 
     position: relative;
@@ -190,6 +189,7 @@ footer li:not(.footer__social-media-icons li) {
 
 .footer__top {
     border-bottom: 1px solid #DADADA;
+    padding-bottom: 2.5rem;
 }
 
 .footer__bottom,
@@ -218,6 +218,10 @@ footer li:not(.footer__social-media-icons li) {
     text-decoration: underline;
 }
 
+.footer__bottom {
+    font-size: 0.8125rem;
+}
+
 /* MEDIA QUERIES FOR FOOTER */
 @media only screen and (min-width: 479px) {
     footer::before {
@@ -226,11 +230,20 @@ footer li:not(.footer__social-media-icons li) {
 }
 
 @media only screen and (min-width: 767px) {
+    footer {
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+
     .footer__top,
     .footer__bottom {
       display: flex;
       justify-content: space-between;
       text-align: left;
+    }
+
+    .footer__top {
+        padding-bottom: 0;
     }
 
     .footer__bottom {
@@ -241,6 +254,10 @@ footer li:not(.footer__social-media-icons li) {
         margin-bottom: 0;
     }
 
+    .footer__col:not(:last-child) {
+        margin-top: 0;
+    }
+
     .footer__social-media {
         border: none;
         margin: 0;
@@ -249,16 +266,12 @@ footer li:not(.footer__social-media-icons li) {
   }
 
 @media only screen and (min-width: 1280px) {
-    footer {
-        padding-left: 5em;
-        padding-right: 5em;
-    }
-
     .footer__bottom {
         justify-content: flex-start;
     }
 
     .footer__col:not(:last-child) {
+        margin-top: 0;
         margin-right: 10.625rem;
     }
 }
