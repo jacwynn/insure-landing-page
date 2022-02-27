@@ -1,3 +1,44 @@
+:root {
+    /* Colors */
+    --primary-color: #2D2641;
+    --secondary-color: #96A9C6;
+    --heading-color: #2C2830;
+    --paragraph-color: #837D88;
+
+    /* Fonts */
+    --heading-font: 'DM Serif Display', serif;
+    --paragraph-font: 'Karla', sans-serif;
+}
+
+/*** 1.0 - Global Styles ***/
+html,
+body {
+    font-family: var(--paragraph-font);
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--heading-font);
+}
+
+h2 {
+    font-size: 4.5rem; /* 4.5 * 16 = 72px */
+}
+
+h3 {
+    font-size: 3.5rem; /* 3.5 * 16 = 56px */
+}
+
+button {
+    font-size: 0.8125rem; /* 0.8125 * 16 - 13px */
+    font-weight: 700;
+}
+
+
+
+/*** 2.0 - Header Styles ***/
 .navbar {
     display: flex;
     align-items: center;
@@ -42,4 +83,3 @@ button {
     line-height: 15.2px;
     text-transform: uppercase;
     color: #2C2830;
-}
