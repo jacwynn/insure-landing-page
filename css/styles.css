@@ -36,9 +36,125 @@ h3 {
 button {
     font-size: 0.8125rem; /* 0.8125 * 16 - 13px */
     font-weight: 700;
+    background: none;
+    border: 1px solid #2C2830;
+    text-transform: uppercase;
+    color: #2C2830;
+    padding: 0.9375em 1.875em;
+    letter-spacing: 0.09375em;
 }
 
-/* Footer Styles */
+/* HEADER STYLES */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25em;
+    max-height: 5em;
+    margin: 0 5em;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.3em;
+}
+
+.menu li {
+    padding: 0.3125em 0.875em;
+   }
+
+.nav-links {
+    list-style-type: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    color: #837D88;
+}
+
+/* RESPONSIVE NAVBAR MENU START */
+input[type=checkbox] {
+    display: none;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    user-select: none;
+    outline: 1px solid;
+    padding: 0.1875em 0.3125em;
+}
+
+.multiplication {
+    display: none;
+    font-size: 1.5rem;
+    user-select: none;
+    outline: 1px solid;
+    padding: 0.1875em 0.3125em;
+}
+
+/* MEDIA QUERIES FOR HEADER */
+@media (max-width: 768px) {
+.navbar {
+    margin: 0 2em;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    background-color: #2C2830;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 1em;
+}
+
+.menu li+li {
+    margin-top: 0.75em;
+}
+
+input[type=checkbox]:checked~.menu {
+    display: block;
+}
+
+.hamburger {
+    display: block;
+}
+
+input[type=checkbox]:checked~.hamburger {
+    display: none;
+}
+
+input[type=checkbox]:checked~.multiplication {
+    display: block;
+}
+
+.nav-links a {
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+button {
+    background: none;
+    border: 1px solid white;
+    text-transform: uppercase;
+    color: white;
+    padding: 0.9375em 1.875em;
+    letter-spacing: 0.09375em;
+}
+} /*RESPONSIVE NAVBAR MENU END*/
+
+/* FOOTER STYLES */
 footer {
     background-color: var(--background-color);
     font-size: 0.8125rem;
@@ -105,6 +221,7 @@ footer li:not(.footer__social-media-icons li) {
     text-decoration: underline;
 }
 
+/* MEDIA QUERIES FOR FOOTER */
 @media only screen and (min-width: 479px) {
     footer::before {
         background-position: revert;
