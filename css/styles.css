@@ -321,6 +321,12 @@ footer li:not(.footer__social-media-icons li) {
     margin-bottom: 2.5rem;
 }
 
+.ctablock__button button {
+    border-color: #ffffff;
+    color: #ffffff;
+    cursor: pointer;
+}
+
 @media only screen and (min-width: 767px) {
     .ctablock:before {
         transform: none;
