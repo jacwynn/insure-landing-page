@@ -1,3 +1,45 @@
-body {
-    background-color: gray;
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    height: 80px;
+    margin: 0 80px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.3em;
+}
+
+.menu li {
+    padding: 5px 14px;
+   }
+
+.nav-links {
+    list-style-type: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 15.2px;
+    text-transform: uppercase;
+    color: #837D88;
+}
+
+button {
+    background: none;
+    border: 1.5px solid #2C2830;
+    width: 146px;
+    height: 40px;
+    font-size: 13px;
+    line-height: 15.2px;
+    text-transform: uppercase;
+    color: #2C2830;
 }
