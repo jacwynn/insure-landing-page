@@ -184,6 +184,7 @@ footer > * {
 
 footer h4 {
     color: var(--paragraph-color);
+    font-weight: 700;
     margin-bottom: 2.25rem;
 }
 
