@@ -44,14 +44,19 @@ button {
     letter-spacing: 0.09375em;
 }
 
+.wrapper {
+    max-width: 69.4375rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* HEADER STYLES */
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.25em 0;
+    padding: 1.25em;
     max-height: 5em;
-    margin: 0 5em;
 }
 
 .menu {
@@ -99,10 +104,6 @@ input[type=checkbox] {
 
 /* MEDIA QUERIES FOR HEADER */
 @media (max-width: 768px) {
-.navbar {
-    margin: 0 2em;
-}
-
 .menu {
     display: none;
     position: absolute;
@@ -230,11 +231,6 @@ footer li:not(.footer__social-media-icons li) {
 }
 
 @media only screen and (min-width: 767px) {
-    footer {
-        padding-left: 5em;
-        padding-right: 5em;
-    }
-
     .footer__top,
     .footer__bottom {
       display: flex;
@@ -281,6 +277,7 @@ footer li:not(.footer__social-media-icons li) {
     background-color: var(--primary-color);
     position: relative;
     overflow: hidden;
+    margin: 0 1.25em;
 }
 
 .ctablock:before {
@@ -328,6 +325,11 @@ footer li:not(.footer__social-media-icons li) {
 }
 
 @media only screen and (min-width: 767px) {
+    .ctablock {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .ctablock:before {
         transform: none;
     }
