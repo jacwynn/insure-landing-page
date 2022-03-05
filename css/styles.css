@@ -92,7 +92,6 @@ button {
     color: #837D88;
 }
 
-/* RESPONSIVE NAVBAR MENU START */
 input[type=checkbox] {
     display: none;
 }
@@ -116,49 +115,49 @@ input[type=checkbox] {
 
 /* MEDIA QUERIES FOR HEADER */
 @media (max-width: 768px) {
-.menu {
-    display: none;
-    position: absolute;
-    background-color: #2C2830;
-    right: 0;
-    left: 0;
-    text-align: center;
-    padding: 1em 0;
-    margin-top: 1em;
-}
+    .menu {
+        display: none;
+        position: absolute;
+        background-color: #2C2830;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 1em 0;
+        margin-top: 1em;
+    }
 
-.menu li+li {
-    margin-top: 0.75em;
-}
+    .menu li+li {
+        margin-top: 0.75em;
+    }
 
-input[type=checkbox]:checked~.menu {
-    display: block;
-}
+    input[type=checkbox]:checked~.menu {
+        display: block;
+    }
 
-.hamburger {
-    display: block;
-}
+    .hamburger {
+        display: block;
+    }
 
-input[type=checkbox]:checked~.hamburger {
-    display: none;
-}
+    input[type=checkbox]:checked~.hamburger {
+        display: none;
+    }
 
-input[type=checkbox]:checked~.multiplication {
-    display: block;
-}
+    input[type=checkbox]:checked~.multiplication {
+        display: block;
+    }
 
-.nav-links a {
-    font-size: 0.8125rem;
-    text-transform: uppercase;
-    color: white;
-}
+    .nav-links a {
+        font-size: 0.8125rem;
+        text-transform: uppercase;
+        color: white;
+    }
 
-button {
-    border: 1px solid white;
-    color: white;
-    padding: 0.9375em 1.875em;
+    button {
+        border: 1px solid white;
+        color: white;
+        padding: 0.9375em 1.875em;
+    }
 }
-} /*RESPONSIVE NAVBAR MENU END*/
 
 /*HERO IMAGE STYLE*/
 .hero {
