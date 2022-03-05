@@ -70,15 +70,20 @@ button {
     max-height: 5em;
 }
 
+.logo {
+    cursor: pointer;
+}
+
 .menu {
     display: flex;
     align-items: center;
+    overflow: hidden;
     z-index: 9999;
 }
 
 .menu li {
     padding: 0.3125em 0.875em;
-   }
+}
 
 .nav-links {
     list-style-type: none;
@@ -92,7 +97,6 @@ button {
     color: #837D88;
 }
 
-/* RESPONSIVE NAVBAR MENU START */
 input[type=checkbox] {
     display: none;
 }
@@ -115,56 +119,119 @@ input[type=checkbox] {
 }
 
 /* MEDIA QUERIES FOR HEADER */
+@media (max-width: 480px) {
+    .menu:after {
+        content: "";
+        background-image: url('../images/accent-10.svg');
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 60%;
+        left: 3rem;
+        width: 100%;
+        height: 100%;
+        transform: scale(1.3);
+    }
+
+    input[type=checkbox]:checked~.menu {
+        min-height: 30rem;
+    }
+}
+
 @media (max-width: 768px) {
-.menu {
-    display: none;
-    position: absolute;
-    background-color: #2C2830;
-    right: 0;
-    left: 0;
-    text-align: center;
-    padding: 1em 0;
-    margin-top: 1em;
-}
+    .menu {
+        display: none;
+        position: absolute;
+        background-color: #2C2830;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 1em 0;
+        margin-top: 1em;
+    }
 
-.menu li+li {
-    margin-top: 0.75em;
-}
+    .menu li+li {
+        margin-top: 0.75em;
+    }
 
-input[type=checkbox]:checked~.menu {
-    display: block;
-}
+    input[type=checkbox]:checked~.menu {
+        display: block;
+    }
 
-.hamburger {
-    display: block;
-}
+    .hamburger {
+        display: block;
+    }
 
-input[type=checkbox]:checked~.hamburger {
-    display: none;
-}
+    input[type=checkbox]:checked~.hamburger {
+        display: none;
+    }
 
-input[type=checkbox]:checked~.multiplication {
-    display: block;
-}
+    input[type=checkbox]:checked~.multiplication {
+        display: block;
+    }
 
-.nav-links a {
-    font-size: 0.8125rem;
-    text-transform: uppercase;
-    color: white;
-}
+    .nav-links a {
+        font-size: 0.8125rem;
+        text-transform: uppercase;
+        color: white;
+    }
 
-button {
-    border: 1px solid white;
-    color: white;
-    padding: 0.9375em 1.875em;
+    button {
+        border: 1px solid white;
+        color: white;
+        padding: 0.9375em 1.875em;
+    }
 }
-} /*RESPONSIVE NAVBAR MENU END*/
 
 /*HERO IMAGE STYLE*/
 .hero {
     background: var(--primary-color);
     color: white;
     max-height: 34.375em;
+    position: relative;
+}
+
+.hero:before,
+.hero:after {
+    content: '';
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+} 
+
+.hero:before {
+    background-image: url('../images/accent-6.svg');
+    top: 25rem;
+    left: 0;
+}
+
+.hero:after {
+    background-image: url('../images/accent-5.svg');
+    background-position: 100% -10rem;
+    top: 0;
+    transform: none;
+    z-index: 101;
+}
+
+.hero > * {
+    position: relative;
+    z-index: 100;
+}
+
+.hero_content h3 {
+    display: inline-block;
+    position: relative;
+}
+
+.hero_content h3:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -3rem;
+    height: 1px;
+    width: 8rem;
+    background: #ffffff;
 }
 
 .hero_container {
@@ -172,6 +239,12 @@ button {
     align-items: center;
     justify-content: center;
     max-height: 34.375em;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+}
+
+.hero_image_desktop {
+    pointer-events: none;
 }
 
 .hero_image_desktop img {
@@ -219,13 +292,24 @@ button {
         padding-bottom: 5em;
     }
 
+    .hero:before {
+        top: 10rem;
+    }
+
+    .hero:after {
+        background-image: url('../images/accent-9.svg');
+        background-position: 100%;
+        transform: translateY(35rem);
+    }
+
+    .hero_content h3:before {
+        display: none;
+    }
+
     .hero_container {
         flex-direction: column-reverse;
         max-height: none;
-    }
-
-    .hero_content hr {
-        display: none;
+        padding: 0;
     }
 
     .hero_image_mobile {
@@ -238,6 +322,7 @@ button {
 
     .hero_content {
         text-align: center;
+        margin: 0 1.25em;
     }
 
     .hero_content h3 {
@@ -316,7 +401,9 @@ button {
 
 @media only screen and (min-width: 767px) {
     .content-area {
-        margin: 19.0625rem auto 0;
+        margin: 15rem auto 0;
+        padding-left: 1.25em;
+        padding-right: 1.25em;
         text-align: left;
     }
 
@@ -366,7 +453,9 @@ footer > * {
 
 footer h4 {
     color: var(--paragraph-color);
+    font-family: var(--paragraph-font);
     font-weight: 700;
+    font-size: 0.8125rem;
     margin-bottom: 2.25rem;
 }
 
@@ -381,7 +470,7 @@ footer li:not(.footer__social-media-icons li) {
 
 .footer__bottom,
 .footer__social-media,
-.footer__col:not(:last-child) {
+.footer__col {
     margin-top: 2.5rem;
 }
 
@@ -436,10 +525,6 @@ footer li:not(.footer__social-media-icons li) {
         margin-bottom: 0;
     }
 
-    .footer__col:not(:last-child) {
-        margin-top: 0;
-    }
-
     .footer__social-media {
         border: none;
         margin: 0;
@@ -452,8 +537,11 @@ footer li:not(.footer__social-media-icons li) {
         justify-content: flex-start;
     }
 
-    .footer__col:not(:last-child) {
+    .footer__col {
         margin-top: 0;
+    }
+
+    .footer__col:not(:last-child) {
         margin-right: 10.625rem;
     }
 }
